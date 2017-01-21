@@ -11,3 +11,9 @@ nav.navbar.navbar-inverse.navbar-fixed-top
     .collapse.navbar-collapse
       ul.nav.navbar-nav
         == render 'layouts/navigation_links'
+      ul.nav.navbar-nav.navbar-right
+        - if client_signed_in?
+          li= link_to 'Wyloguj się', destroy_client_session_path, class: 'navbar-brand'
+        - else
+          li= link_to 'Logowanie', new_client_session_path, class: 'navbar-brand'
+          li= link_to 'Rejestracja', new_client_registration_path, class: 'navbar-brand'
