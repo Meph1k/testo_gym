@@ -1,0 +1,7 @@
+h1 Ustaw ocenę wysiłku
+
+.row
+  .col-md-6
+    = simple_form_for @diet, url: save_effort_diet_path(@diet) do |f|
+      = f.input :effort, collection: 0..5, label: 'Twoja ocena wysiłku'
+      = f.submit 'Dalej', class: 'btn btn-primary'

@@ -10,7 +10,7 @@ nav.navbar.navbar-inverse.navbar-fixed-top
       = link_to 'Home', root_path, class: 'navbar-brand'
     .collapse.navbar-collapse
       ul.nav.navbar-nav
-        == render 'layouts/navigation_links'
+        = link_to 'Utwórz dietę', diets_path, class: 'navbar-brand', method: :post
       ul.nav.navbar-nav.navbar-right
         - if client_signed_in?
           li= link_to 'Wyloguj się', destroy_client_session_path, class: 'navbar-brand'

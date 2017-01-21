@@ -1,0 +1,7 @@
+h1 Wybierz cel
+
+.row
+  .col-md-6
+    = simple_form_for @diet, url: save_goal_diet_path(@diet) do |f|
+      = f.input :goal, collection: -1..1, label_method: lambda {|i| ['redukcja masy', 'utrzymanie wagi', 'zwiększenie masy'].fetch(i+1) }, label: 'Twój cel'
+      = f.submit 'Dalej', class: 'btn btn-primary'

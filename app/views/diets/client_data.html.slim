@@ -1,0 +1,8 @@
+h1 Wprowadź swoje dane
+
+.row
+  .col-md-6
+    = simple_form_for @diet, url: save_client_data_diet_path(@diet) do |f|
+      = f.input :client_height, label: 'Twoja wysokość [cm]'
+      = f.input :client_weight, label: 'Twoja waga [kg]'
+      = f.submit 'Dalej', class: 'btn btn-primary'
