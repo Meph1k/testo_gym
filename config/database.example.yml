@@ -18,8 +18,8 @@ development:
   encoding: unicode
   database: testo_gym_development
   pool:     5
-  username: rails_u
-  password: 
+  username:
+  password:
   template: template0
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -46,8 +46,8 @@ test:
   encoding: unicode
   database: testo_gym_test
   pool:     5
-  username: rails_u
-  password: 
+  username:
+  password:
   template: template0
 
 production:
@@ -56,6 +56,6 @@ production:
   encoding: unicode
   database: testo_gym_production
   pool:     5
-  username: rails_u
-  password: 
+  username:
+  password:
   template: template0
