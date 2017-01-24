@@ -18,6 +18,10 @@ class DietsController < ApplicationController
   def client_data
   end
 
+  def profile_diet
+
+  end
+
   def save_client_data
     @diet.save_client_data(diet_params[:client_height], diet_params[:client_weight])
     redirect_to effort_diet_path(@diet)
@@ -34,6 +38,16 @@ class DietsController < ApplicationController
   end
 
   def preview
+  end
+
+  def submit_plan
+    diet = Diet.new(@diet)
+    diet.save
+  end
+
+  def discard_plan
+    @diet.remove_macronutrients_and_kcal
+    redirect_to root_path
   end
 
   private

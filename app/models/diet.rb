@@ -26,6 +26,14 @@ class Diet < ApplicationRecord
     save
   end
 
+  def remove_macronutrients_and_kcal
+    self.kcal = 0
+    self.protein = 0
+    self.carbohydrates = 0
+    self.fat = 0
+    save
+  end
+
   private
 
   def default_values
