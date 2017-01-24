@@ -19,7 +19,6 @@ class DietsController < ApplicationController
   end
 
   def profile_diet
-
   end
 
   def save_client_data
@@ -41,8 +40,7 @@ class DietsController < ApplicationController
   end
 
   def submit_plan
-    diet = Diet.new(@diet)
-    diet.save
+    redirect_to profile_diet_path
   end
 
   def discard_plan
