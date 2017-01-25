@@ -12,6 +12,7 @@ class DietsController < ApplicationController
 
   def save_goal
     @diet.save_goal(diet_params[:goal])
+    session[:diet_id] = @diet.id
     redirect_to client_data_diet_path(@diet)
   end
 
@@ -45,6 +46,7 @@ class DietsController < ApplicationController
 
   def discard_plan
     @diet.remove_macronutrients_and_kcal
+    flash[:resign] = "Odrzuciłeś proponowaną dietę"
     redirect_to root_path
   end
 

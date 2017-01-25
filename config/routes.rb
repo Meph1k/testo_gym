@@ -15,6 +15,7 @@ Rails.application.routes.draw do
       get :effort
       patch :save_effort
       get :profile
+      patch :profile_diet
       get :preview
     end
   end

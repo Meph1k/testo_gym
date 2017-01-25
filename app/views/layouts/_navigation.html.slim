@@ -11,7 +11,7 @@ nav.navbar.navbar-inverse.navbar-fixed-top
     .collapse.navbar-collapse
       ul.nav.navbar-nav
         = link_to 'Utwórz dietę', diets_path, class: 'navbar-brand', method: :post
-        = link_to 'Twoja dieta', profile_diet_path, class: 'navbar-brand', method: :post
+        = link_to 'Twoja dieta', profile_diet_path(session[:diet_id]), class: 'navbar-brand', method: :post
       ul.nav.navbar-nav.navbar-right
         - if client_signed_in?
           li= link_to 'Wyloguj się', destroy_client_session_path, class: 'navbar-brand'
